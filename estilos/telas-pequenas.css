@@ -1,0 +1,38 @@
+header {
+    display: grid;
+    grid-template-columns: 24px auto 44px;
+    padding: 5px 0 5px 10px;
+    border-bottom: solid 1px #ddd;
+    column-gap: 8px;
+    align-items: end;
+}
+
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding-bottom: 4px;
+
+}
+
+header span {
+    font-size: 1.2rem;
+    color: #446db8;
+}
+
+.hamburguer {
+    background-color: none;
+    border: none;
+    color: #3D405B;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.hamburguer::after {
+    content: "\2630";
+    font-size: 2rem;
+}
+
+.hamburguer.show::after {
+    content: "\00D7";   
+}
