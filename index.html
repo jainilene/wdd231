@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="estilos/normalize.css">
     <link rel="stylesheet" href="estilos/telas-pequenas.css">
     <link rel="stylesheet" href="estilos/telas-grandes.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Delius&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Lavishly+Yours&family=Petit+Formal+Script&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <script src="scripts/navegacao.js" defer></script>
     <script src="scripts/data.js" defer></script>
     <script src="scripts/curso.js" defer></script>
@@ -19,34 +24,43 @@
     <header>
         <img src="imagens/logo.svg" alt="Logotipo do site" width="512" height="512">
         <span>Projeto de Jainilene</span>
-         <button id="ham-btn" class="hamburguer"></button>
+        <button id="ham-btn" class="hamburguer"></button>
     </header>
-    <nav>
+    <nav id="nav-bar" class="navegacao">
         <ul>
-            <li> <a href="index.html">Página Inicial</a></li>
+            <li class="atual"> <a href="index.html">Página Inicial</a></li>
             <li> <a href="#">Projeto da câmara</a></li>
             <li> <a href="#">Projeto Final</a></li>
         </ul>
     </nav>
     <main>
         <h1>Página Inicial</h1>
-        <section>
+        <section class="secao-sobre">
             <h2>Sobre mim</h2>
+            <p>Tenho 34 anos, sou casada e tenho uma filha de 8 anos. Sou natural de Teresina(PI), mas moro em São
+                Luis(MA) há quase 10 anos. Sou membro de A Igreja de Jesus Cristo dos Santos dos Últimos Dias na ala
+                Vinhais estaca São Luis(MA). Sou aluna do curso de desenvolvimento de sistemas na BYU Idaho e sou grata
+                pelas experiências que vivo a minha vida e neste curso. </p>
         </section>
-        <section>
+        <section class="secao-foto">
             <h2>Foto do Estudante</h2>
+            <img src="imagens/perfil.jpg" alt="Foto de perfil de Jainilene Nascimento">
         </section>
-        <section>
+        <section class="secao-cursos">
             <h2>Cursos de Certificado Web</h2>
         </section>
-        
+
     </main>
     <footer>
-         <div class="social">
-            <a href="https://github.com/jainilene/wdd231" target="_blank"><img src="imagens/github.svg" alt="GitHub" width="16" height="16"></a>
-            <a href="https://www.linkedin.com/in/jainilene-nascimento-67155260/" target="_blank"><img src="imagens/linkedin.svg" alt="LikedIn" width="16" height="16"></a>
-            <a href="https://www.facebook.com" target="_blank"><img src="imagens/facebook.svg" alt="Facebook" width="16" height="16"></a>
-            <a href="https://x.com" target="_blank"><img src="imagens/twitter-x.svg" alt="Twitter" width="16" height="16"></a>
+        <div class="social">
+            <a href="https://github.com/jainilene/wdd231" target="_blank"><img src="imagens/github.svg" alt="GitHub"
+                    width="16" height="16"></a>
+            <a href="https://www.linkedin.com/in/jainilene-nascimento-67155260/" target="_blank"><img
+                    src="imagens/linkedin.svg" alt="LikedIn" width="16" height="16"></a>
+            <a href="https://www.facebook.com" target="_blank"><img src="imagens/facebook.svg" alt="Facebook" width="16"
+                    height="16"></a>
+            <a href="https://x.com" target="_blank"><img src="imagens/twitter-x.svg" alt="Twitter" width="16"
+                    height="16"></a>
         </div>
         <p>&COPY; <span id="anoAtual"></span> - Jainilene Nascimento - São Luis, MA </p>
         <p>Última modificação: <span id="ultimaModificacao"></span></p>

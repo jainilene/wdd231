@@ -1,3 +1,19 @@
+/*
+esquema de cores
+azul - #446db8
+cadetblue
+#depeslateblue #3D405B
+
+*/
+
+* {
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+
+}
+
+/* Cabeçalho */
+
 header {
     display: grid;
     grid-template-columns: 24px auto 44px;
@@ -34,5 +50,126 @@ header span {
 }
 
 .hamburguer.show::after {
-    content: "\00D7";   
+    content: "\00D7";
 }
+
+/* Navegação */
+
+.navegacao {
+    display: none;
+}
+
+.navegacao.show {
+    display: block;
+}
+
+.navegacao ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navegacao a {
+    display: block;
+    padding: .8rem 10px;
+    color: #3D405B;
+    text-decoration: none;
+    border-bottom: solid 1px #ddd;
+
+}
+
+.navegacao li.atual {
+    background-color: #eee;
+}
+
+.navegacao a:show {
+    background-color: #E07A5F;
+}
+
+.navegacao a:hover {
+    background-color: #E07A5F;
+}
+
+h1 {
+    margin-left: 10px;
+}
+
+footer {
+    background-color: #eee;
+    padding: 1rem 10px;
+    text-align: center;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    column-gap: 8px;
+}
+
+.social a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: #ccc solid 1px;
+    border-radius: 22px;
+    width: 44px;
+    height: 44px;
+}
+
+.social img {
+    width: 22px;
+    height: 22px;
+
+}
+
+.social a:hover {
+    background-color: #ddd;
+}
+
+/* Main */
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+section {
+    margin: 5px 5px;
+    border: solid 1px #ddd;
+}
+
+.secao-sobre {
+    grid-column: 1/3;
+}
+
+.secao-foto {
+    grid-column: 1/3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.secao-foto img {
+    display: block;
+    height: 300px;
+    width: auto;
+    display: flex;
+    align-items: center;
+
+}
+
+.secao-cursos {
+    grid-column: 1/3;
+}
+
+section h2 {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #3D405B;
+    color: white;
+    padding: 5px 5px;
+}
+
+/* Fim main */
