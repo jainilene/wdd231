@@ -76,4 +76,59 @@ const cursos = [
         ],
         concluido: false
     }
-]
+];
+
+const totalCreditos = 0;
+criarCards(cursos);
+
+function criarCards(cursosF) {
+
+    document.querySelector(".container-cursos").innerHTML = '';
+    cursosF.forEach(curso => {
+        // Cria os elementos html
+        let card = document.createElement("section");
+        card.classList.add("section-cursos");
+        let nomeCurso = document.createElement("h3");
+
+        // Preenche os dados com os valores do array de templos
+        nomeCurso.textContent = `${curso.assunto} ${curso.numero}`;
+
+
+        // Adiciona os elementos ao cartão
+        card.appendChild(nomeCurso);
+
+        if (curso.concluido) {
+            card.classList.add("concluido");
+        }
+
+        document.querySelector(".container-cursos").appendChild(card);
+        // Adiciona o cartão ao documento
+    });
+
+    mostrarTotalCreditos(cursosF);
+
+}
+
+function mostrarTotalCreditos(lista) {
+    const total = lista.reduce((soma, curso) => soma + curso.creditos, 0);
+    document.querySelector("#total-creditos").textContent = total;
+}
+
+const botaoTodos = document.querySelector("#botao-todos");
+const botaoCse = document.querySelector("#botao-cse");
+const botaoWdd = document.querySelector("#botao-wdd");
+
+botaoTodos.addEventListener('click', () => {
+    criarCards(cursos);
+})
+botaoCse.addEventListener('click', () => {
+    const filtrados = cursos.filter(curso => curso.assunto === 'CSE');
+    criarCards(filtrados);
+})
+botaoWdd.addEventListener('click', () => {
+    const filtrados = cursos.filter(curso => curso.assunto === 'WDD');
+    criarCards(filtrados);
+});
+
+
+

@@ -9,6 +9,8 @@ cadetblue
 * {
     font-family: "Roboto", sans-serif;
     box-sizing: border-box;
+    margin: 0 auto;
+
 
 }
 
@@ -107,6 +109,7 @@ footer {
 }
 
 .social a {
+    margin: 0;               /* adicione esta linha */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -170,6 +173,50 @@ section h2 {
     background-color: #3D405B;
     color: white;
     padding: 5px 5px;
+}
+
+/* Div Botoes dos cursos */
+.container-botoes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin-top: 10px;
+
+}
+
+.botao-cursos {
+    height: 2.5rem;
+    width: auto;
+    border-radius: 10px;
+}
+
+
+/* Seção cursos */
+
+.container-cursos {
+    margin: 0 auto;
+}
+
+.section-cursos {
+    /* width: 400px; */
+    /* height: 400px; */
+    background-color: #D3D3D3;
+    border: 1px solid #333;
+    border-radius: 8px;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 0.7rem;
+    width: 100%;
+}
+
+.section-cursos.concluido {
+    background-color: #2e7d32;
+    color: white;
+}
+
+h3 {
+    font-weight: bold;
+    text-align: center;
 }
 
 /* Fim main */
