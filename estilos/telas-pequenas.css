@@ -154,7 +154,6 @@ section {
 }
 
 .secao-foto img {
-    display: block;
     height: 300px;
     width: auto;
     display: flex;
