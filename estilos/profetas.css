@@ -1,0 +1,31 @@
+* {
+    margin: 0 auto;
+    background-color: antiquewhite;
+}
+
+span {
+    font-weight: 300;
+    color: blue;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    width: 100%;
+    text-align: center;
+    background-color: #964b00;
+}
+
+section {
+    display: grid;
+    justify-content: center;
+    border: solid 2px black;
+    width: fit-content;
+    /* a borda se ajusta ao conteúdo */
+    padding: 16px;
+    /* respiro entre conteúdo e borda */
+    margin: 20px auto;
+    /* espaço entre os cartões, centralizados */
+}
