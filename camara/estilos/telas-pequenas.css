@@ -131,10 +131,10 @@ footer {
 
 /* Main */
 
-main {
+/* main {
     display: grid;
     grid-template-columns: 1fr 1fr;
-}
+} */
 
 section {
     margin: 5px 5px;
