@@ -1,0 +1,58 @@
+[
+    {
+        "nome": "TecSoluções",
+        "endereco": "Space Calhau 1, 125, São Luis - MA",
+        "telefone": "(98) 3333-3333",
+        "site": "https://www.tecsolucoes.com.br",
+        "imagem": "tecsolucoes.webp",
+        "nivelAssociacao": 3
+    },
+    {
+        "nome": "DeliciOsi",
+        "endereco": "Space Calhau 1, 450, São Luis - MA",
+        "telefone": "(98) 32222-2222",
+        "site": "https://www.deliciosi.com.br",
+        "imagem": "deliciosi.webp",
+        "nivelAssociacao": 2
+    },
+    {
+        "nome": "Delicias de Maria",
+        "endereco": "Space Calhau 1, 890, São Luis - MA",
+        "telefone": "(31) 31111-1111",
+        "site": "https://www.deliciasdemaria.com.br",
+        "imagem": "deliciasdemaria.webp",
+        "nivelAssociacao": 3
+    },
+    {
+        "nome": "Karlinha K Delicia",
+        "endereco": "Space Calhau 1, 230, São Luis - MA",
+        "telefone": "(98) 30000-0000",
+        "site": "https://www.karlinhakdelicia.com.br",
+        "imagem": "karlinhakdelicias.webp",
+        "nivelAssociacao": 1
+    },
+    {
+        "nome": "Danydecor",
+        "endereco": "Space Calhau 1, 75, São Luis - MA",
+        "telefone": "(81) 35555-5555",
+        "site": "https://www.danydecor.com.br",
+        "imagem": "danydecor.webp",
+        "nivelAssociacao": 2
+    },
+    {
+        "nome": "Divino Prestigio",
+        "endereco": "Space Calhau 1, 560, São Luis - MA",
+        "telefone": "(98) 36666-6666",
+        "site": "https://wwe.divinoprestigio.com.br",
+        "imagem": "divinoprestigio.webp",
+        "nivelAssociacao": 1
+    },
+    {
+        "nome": "Quero Queijo",
+        "endereco": "Space Calhau 1, São Luis - MA",
+        "telefone": "(62) 3888-9900",
+        "site": "https://www.queroqueijo.com.br",
+        "imagem": "queroqueijo.webp",
+        "nivelAssociacao": 3
+    }
+]
