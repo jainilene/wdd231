@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--  -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diretório</title>
+    <meta name="author" content="Jainilene Nascimento">
+    <meta name="description"
+        content="Página inicial do site de câmara de comércio do condominio Space Calhau 1 no bairro Alto do Calhau em São Luis (Maranhão)">
+    <meta property="og:title" content="Página inicial - Câmara Space Calhau 1">
+    <meta property="og:description" content="Página inicial da câmara de comércio Space 1 - São Luis(MA) ">
+    <meta property="og:image" content="../favicon.ico">
+    <meta property="og:url" content="https://jainilene.github.io/wdd231/">
+    <link rel="icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Delius&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Lavishly+Yours&family=Petit+Formal+Script&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="estilos/normalize.css">
+    <link rel="stylesheet" href="estilos/telas-pequenas.css">
+    <link rel="stylesheet" href="estilos/telas-grandes.css">
+    <link rel="stylesheet" href="estilos/diretorio.css">
+    <script src="scripts/diretorio.js" defer></script>
+</head>
+
+<body>
+    <header>
+
+        <img src="../imagens/logo.svg" alt="Logotipo do site" width="512" height="512">
+        <span>Space 1</span>
+        <span>Camara de comércio</span>
+        <button id="ham-btn" name="ham-btn" class="hamburguer"></button>
+
+        <nav id="nav-bar" class="navegacao">
+            <ul>
+                <li class="atual"> <a href="index.html">Página Inicial</a></li>
+                <li> <a href="#">Diretório</a></li>
+                <li> <a href="#">Associe-se</a></li>
+                <li> <a href="#">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+        <img class="img-hero" src="" alt="">
+        <button>Ingressos Palestra</button>
+        <h1>Início</h1>
+        <div class="info-basicas">
+            <section class="div-eventos"></section>
+            <section class="div-clima">
+                <h2>Clima</h2>
+                <p><span id="temperatura"></span></p>
+                <p><span id="descricao-clima"></span></p>
+                <p>Máxima: <span id="maxima"></span></p>
+                <p>Mínima: <span id="mínima"></span></p>
+                <p>Umidade: <span id="umidade"></span></p>
+                <p>Nascer do Sol: <span id="hora-nascer-sol"></span></p>
+                <p>Pôr do Sol: <span id="hora-por-do-sol"></span></p>
+
+            </section>
+            <section class="div-previsao-clima">
+                <h2>Previsão de Clima</h2>
+                <p>Quarta-Feira<span id="temperatura-hoje"></span></p>
+                <p>Sexta-Feira<span id="descricao-clima"></span></p>
+                <p>Máxima: <span id="maxima"></span></p>
+            </section>
+        </div>
+        <div class="destaque-empresas"></div>
+
+    </main>
+    <footer>
+        <div id="dados-camara">
+            <p class="titulo-footer">Space 1 Câmara de Comércio</p>
+            <p>Rua 8 Quadra G, Alto do Calhau </p>
+            <p> São Luis (MA) </p>
+            <p> info@space1cc.org </p>
+            <p> (98) 99999-9999 </p>
+        </div>
+        <div id="redes-socias">
+            <a href="https://github.com/jainilene/wdd231" target="_blank"><img src="../imagens/github.svg" alt="GitHub"
+                    width="16" height="16"></a>
+            <a href="https://www.linkedin.com/in/jainilene-nascimento-67155260/" target="_blank"><img
+                    src="../imagens/linkedin.svg" alt="LikedIn" width="16" height="16"></a>
+            <a href="https://www.facebook.com" target="_blank"><img src="../imagens/facebook.svg" alt="Facebook"
+                    width="16" height="16"></a>
+            <a href="https://x.com" target="_blank"><img src="../imagens/twitter-x.svg" alt="Twitter" width="16"
+                    height="16"></a>
+        </div>
+        <div id="dados-projeto">
+            <p class="titulo-footer">Projeto de Aula WDD231</p>
+            <p>Jainilene Nascimento</p>
+            <p>&copy; <span id="ano-atual"></span> Space 1 Câmara de Comércio</p>
+            <p>Última Modificação: <span id="ultima-modificacao"></span></p>
+        </div>
+    </footer>
+</body>
+
+</html>
