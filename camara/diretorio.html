@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <!--  -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diretório</title>
+    <title>Diretório | Space 1 Câmara de Comércio</title>
     <meta name="author" content="Jainilene Nascimento">
     <meta name="description" content="Página que contém diretório de empresas filiadas na câmara de comércio">
-    <meta property="og:title" content="Página inicial do Projeto de Jainilene WDD 231">
+    <meta property="og:title" content="Diretório | Space 1 Câmara de Comércio">
     <meta property="og:description"
         content="Página de Diretório contendo a lista de empresas filiadas ao Space 1 Câmara de Comércio ">
     <meta property="og:image" content="../favicon.ico">
@@ -21,39 +22,32 @@
     <link rel="stylesheet" href="estilos/normalize.css">
     <link rel="stylesheet" href="estilos/telas-pequenas.css">
     <link rel="stylesheet" href="estilos/telas-grandes.css">
-    <link rel="stylesheet" href="estilos/diretorio.css">
+    <script src="scripts/comum.js" defer></script>
     <script src="scripts/diretorio.js" defer></script>
 </head>
 
 <body>
-    <header>
-
-        <img src="../imagens/logo.svg" alt="Logotipo do site" width="512" height="512">
-        <span>Space 1</span>
-        <span>Camara de comércio</span>
-        <button id="ham-btn" name="ham-btn" class="hamburguer"></button>
-
-        <nav id="nav-bar" class="navegacao">
-            <ul>
-                <li class="atual"> <a href="index.html">Página Inicial</a></li>
-                <li> <a href="#">Diretório</a></li>
-                <li> <a href="#">Associe-se</a></li>
-                <li> <a href="#">Sobre</a></li>
-            </ul>
-        </nav>
+    <header class="cabecalho">
+        <div class="marca"><img src="../imagens/logo.svg" alt="Logotipo Space 1" width="64" height="64"><div><strong>Space 1</strong><span>Câmara de Comércio</span></div></div>
+        <button id="ham-btn" class="hamburguer" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-bar"></button>
+        <nav id="nav-bar" class="navegacao" aria-label="Navegação principal"><ul>
+            <li><a href="index.html">Página Inicial</a></li>
+            <li class="atual"><a href="diretorio.html" aria-current="page">Diretório</a></li><li><a href="associacao.html">Associe-se</a></li><li><a href="sobre.html">Sobre</a></li>
+        </ul></nav>
     </header>
-    <main>
-        <h1>Empresas</h1>
+    <main class="pagina-diretorio">
+        <h1>Diretório de empresas</h1>
+        <p class="introducao">Conheça os negócios associados à Space 1 Câmara de Comércio.</p>
         <div class="controles-visualizacao">
-            <button id="botao-grade" type="button">
+            <button id="botao-grade" type="button" aria-pressed="true">
                 Grade
             </button>
 
-            <button id="botao-lista" type="button">
+            <button id="botao-lista" type="button" aria-pressed="false">
                 Lista
             </button>
         </div>
-        <section id="lista-empresas"></section>
+        <section id="lista-empresas" class="grade" aria-live="polite"><p>Carregando empresas...</p></section>
 
     </main>
     <footer>
@@ -64,7 +58,7 @@
             <p> info@space1cc.org </p>
             <p> (98) 99999-9999 </p>
         </div>
-        <div id="redes-socias">
+        <div id="redes-sociais">
             <a href="https://github.com/jainilene/wdd231" target="_blank"><img src="../imagens/github.svg" alt="GitHub"
                     width="16" height="16"></a>
             <a href="https://www.linkedin.com/in/jainilene-nascimento-67155260/" target="_blank"><img

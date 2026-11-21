@@ -1,0 +1,369 @@
+/* Página inicial Space 1: estilos isolados para preservar o diretório */
+:root {
+    --azul: #3d405b;
+    --azul-claro: #446db8;
+    --fundo: #f5f7fb;
+    --texto: #263247
+}
+
+body {
+    background: var(--fundo);
+    color: var(--texto)
+}
+
+.pagina-inicial {
+    display: block;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1rem 2rem
+}
+
+.cabecalho {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    margin: 0
+}
+
+.marca img {
+    width: 56px;
+    height: 56px;
+    object-fit: contain
+}
+
+.marca div {
+    display: flex;
+    flex-direction: column;
+    margin: 0
+}
+
+.marca strong {
+    font-size: 1.5rem;
+    color: var(--azul-claro)
+}
+
+.marca span {
+    font-size: .9rem
+}
+
+.cabecalho .navegacao {
+    margin: 0
+}
+
+.cabecalho .navegacao ul {
+    display: flex;
+    gap: .4rem
+}
+
+.cabecalho .navegacao li {
+    margin: 0
+}
+
+.cabecalho .navegacao a {
+    border: 0;
+    border-radius: 6px;
+    padding: .8rem
+}
+
+.cabecalho .hamburguer {
+    display: none;
+    margin: 0
+}
+
+.hero {
+    position: relative;
+    margin: 1rem 0 2rem;
+    border: 0;
+    border-radius: 14px;
+    overflow: hidden;
+    min-height: 350px;
+    background: #263247
+}
+
+.img-hero {
+    display: block;
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+    filter: brightness(.63)
+}
+
+.hero-conteudo {
+    position: absolute;
+    left: clamp(1rem, 5vw, 3.5rem);
+    bottom: clamp(1rem, 5vw, 3rem);
+    max-width: 650px;
+    color: #fff;
+    margin: 0
+}
+
+.hero-conteudo p {
+    font-size: 1.05rem;
+    margin: 0 0 .6rem
+}
+
+.hero h1 {
+    font-size: clamp(1.7rem, 4vw, 2.8rem);
+    line-height: 1.12;
+    margin: 0 0 1.3rem;
+    color: white
+}
+
+.botao-cta {
+    display: inline-block;
+    background: #fff;
+    color: #263247;
+    font-weight: 700;
+    padding: .85rem 1.2rem;
+    text-decoration: none;
+    border-radius: 8px
+}
+
+.botao-cta:hover {
+    background: #dbe7ff
+}
+
+.titulo-secao {
+    font-size: 1.5rem;
+    margin: 1.5rem 0 1rem;
+    color: var(--azul)
+}
+
+.info-basicas {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr 1fr;
+    gap: 1rem;
+    align-items: stretch
+}
+
+.painel {
+    background: white;
+    border: 1px solid #dfe4ee;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 0;
+    box-shadow: 0 3px 14px #23344d0d
+}
+
+.painel h2 {
+    background: var(--azul);
+    color: white;
+    padding: .85rem 1rem;
+    font-size: 1.05rem;
+    margin: 0
+}
+
+.painel-corpo {
+    padding: 1rem
+}
+
+.painel-corpo p {
+    margin: .65rem 0;
+    line-height: 1.5
+}
+
+.painel-corpo h3 {
+    font-size: 1.05rem;
+    text-align: left;
+    margin: 0 0 .75rem
+}
+
+.clima-resumo {
+    display: flex;
+    align-items: center;
+    gap: .5rem
+}
+
+.clima-resumo img {
+    margin: 0
+}
+
+.temperatura-grande {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 !important
+}
+
+.previsao-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: .5rem;
+    border-bottom: 1px solid #e6e8ef;
+    padding: .8rem 0
+}
+
+.previsao-item:last-child {
+    border: 0
+}
+
+.previsao-item span {
+    margin: 0
+}
+
+.previsao-item strong {
+    white-space: nowrap
+}
+
+.secao-destaques {
+    margin-top: 2rem
+}
+
+.secao-destaques>p {
+    margin: 0 0 1rem
+}
+
+.destaque-empresas {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem
+}
+
+.destaque-empresas .empresa {
+    margin: 0;
+    min-width: 0;
+    padding: 1.25rem;
+    box-shadow: 0 3px 14px #23344d16;
+    border: 1px solid #e1e5ed
+}
+
+.destaque-empresas .empresa h3 {
+    font-size: 1.2rem;
+    margin: .7rem 0
+}
+
+.destaque-empresas .empresa p {
+    margin: .6rem 0;
+    overflow-wrap: anywhere
+}
+
+.destaque-empresas .empresa img {
+    width: 150px;
+    max-width: 100%;
+    height: 110px;
+    object-fit: contain
+}
+
+.nivel-associacao {
+    display: inline-block;
+    padding: .25rem .7rem;
+    border-radius: 20px;
+    background: #edf2ff;
+    color: #263247;
+    font-weight: 700
+}
+
+footer {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    text-align: left;
+    padding: 1.5rem
+}
+
+footer>div {
+    margin: 0
+}
+
+footer p {
+    margin: .4rem 0
+}
+
+#redes-sociais {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem
+}
+
+#redes-sociais a {
+    margin: 0
+}
+
+#redes-sociais img {
+    width: 28px;
+    height: 28px
+}
+
+@media(max-width:800px) {
+    .info-basicas {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+    }
+
+    .div-eventos {
+        grid-column: 1/-1
+    }
+
+    .destaque-empresas {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+    }
+}
+
+@media(max-width:600px) {
+    .cabecalho .hamburguer {
+        display: block;
+        margin: 0
+    }
+
+    .cabecalho .navegacao {
+        display: none;
+        width: 100%;
+        margin: 0
+    }
+
+    .cabecalho .navegacao.show {
+        display: block
+    }
+
+    .cabecalho .navegacao ul {
+        display: block
+    }
+
+    .cabecalho .navegacao li {
+        display: block
+    }
+
+    .cabecalho .navegacao a {
+        display: block
+    }
+
+    .info-basicas,
+    .destaque-empresas,
+    footer {
+        grid-template-columns: 1fr
+    }
+
+    .div-eventos {
+        grid-column: auto
+    }
+
+    .img-hero {
+        height: 340px
+    }
+
+    .hero {
+        min-height: 340px
+    }
+
+    .hero-conteudo {
+        bottom: 1.3rem;
+        right: 1rem
+    }
+
+    #redes-sociais {
+        justify-content: flex-start
+    }
+}
