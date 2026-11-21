@@ -78,7 +78,7 @@ body {
 
 .cabecalho .hamburguer {
     display: none;
-    margin: 0
+    margin: 0;
 }
 
 .hero {
@@ -88,7 +88,8 @@ body {
     border-radius: 14px;
     overflow: hidden;
     min-height: 350px;
-    background: #263247
+    background: #263247;
+    color: #ffffff;
 }
 
 .img-hero {
