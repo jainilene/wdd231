@@ -2,20 +2,6 @@
 // Informe sua chave gratuita do OpenWeatherMap (https://openweathermap.org/api).
 const API_KEY = "94dcd8d0b31534804e23fc9e2479ac3a";
 const CIDADE = { lat: -2.5307, lon: -44.3068 };
-const $ = seletor => document.querySelector(seletor);
-
-function iniciarLayout() {
-  const botao = $("#ham-btn");
-  const nav = $("#nav-bar");
-  botao?.addEventListener("click", () => {
-    const aberto = nav.classList.toggle("show");
-    botao.classList.toggle("show", aberto);
-    botao.setAttribute("aria-expanded", String(aberto));
-    botao.setAttribute("aria-label", aberto ? "Fechar menu" : "Abrir menu");
-  });
-  $("#ano-atual").textContent = new Date().getFullYear();
-  $("#ultima-modificacao").textContent = document.lastModified;
-}
 
 function criarElemento(tag, texto, classe) {
   const el = document.createElement(tag);
@@ -25,7 +11,7 @@ function criarElemento(tag, texto, classe) {
 }
 
 async function carregarDestaques() {
-  const destino = $("#destaque-empresas");
+  const destino = document.querySelector("#destaque-empresas");
   try {
     const resposta = await fetch("dados/membros.json");
     if (!resposta.ok) throw new Error(`HTTP ${resposta.status}`);
@@ -67,9 +53,9 @@ function horaLocal(timestamp, deslocamento) {
 }
 async function carregarClima() {
   if (API_KEY === "SUA_CHAVE_OPENWEATHERMAP") {
-    $("#temperatura").textContent = "Configurar API";
-    $("#descricao-clima").textContent = "Insira sua chave OpenWeatherMap no arquivo scripts/inicio.js.";
-    $("#previsao-dias").textContent = "Aguardando chave da API meteorológica.";
+    document.querySelector("#temperatura").textContent = "Configurar API";
+    document.querySelector("#descricao-clima").textContent = "Insira sua chave OpenWeatherMap no arquivo scripts/inicio.js.";
+    document.querySelector("#previsao-dias").textContent = "Aguardando chave da API meteorológica.";
     return;
   }
   const parametros = `lat=${CIDADE.lat}&lon=${CIDADE.lon}&appid=${encodeURIComponent(API_KEY)}&units=metric&lang=pt_br`;
@@ -81,16 +67,23 @@ async function carregarClima() {
     if (!atualResp.ok || !previsaoResp.ok) throw new Error("Falha na API meteorológica");
     const atual = await atualResp.json();
     const previsao = await previsaoResp.json();
-    $("#temperatura").textContent = `${Math.round(atual.main.temp)} °C`;
-    $("#descricao-clima").textContent = atual.weather[0].description;
-    $("#maxima").textContent = `${Math.round(atual.main.temp_max)} °C`;
-    $("#minima").textContent = `${Math.round(atual.main.temp_min)} °C`;
-    $("#umidade").textContent = `${atual.main.humidity}%`;
-    $("#hora-nascer-sol").textContent = horaLocal(atual.sys.sunrise, atual.timezone);
-    $("#hora-por-do-sol").textContent = horaLocal(atual.sys.sunset, atual.timezone);
-    const icone = $("#icone-clima");
+    document.querySelector("#temperatura").textContent = `${Math.round(atual.main.temp)} °C`;
+    document.querySelector("#descricao-clima").textContent = atual.weather[0].description;
+    document.querySelector("#maxima").textContent = `${Math.round(atual.main.temp_max)} °C`;
+    document.querySelector("#minima").textContent = `${Math.round(atual.main.temp_min)} °C`;
+    document.querySelector("#umidade").textContent = `${atual.main.humidity}%`;
+    document.querySelector("#hora-nascer-sol").textContent = horaLocal(atual.sys.sunrise, atual.timezone);
+    document.querySelector("#hora-por-do-sol").textContent = horaLocal(atual.sys.sunset, atual.timezone);
+    const containerIconeClima = document.querySelector("#container-icone-clima");
+
+    const icone = document.createElement("img");
+
     icone.src = `https://openweathermap.org/img/wn/${atual.weather[0].icon}@2x.png`;
-    icone.alt = atual.weather[0].description; icone.hidden = false;
+    icone.alt = atual.weather[0].description;
+    icone.width = 70;
+    icone.height = 70;
+
+    containerIconeClima.replaceChildren(icone);
     // A API de previsão fornece intervalos de três horas; usa o horário mais próximo de 12h local.
     const grupos = new Map();
     const hoje = new Date((atual.dt + atual.timezone) * 1000).toISOString().slice(0, 10);
@@ -101,7 +94,7 @@ async function carregarClima() {
       const distancia = Math.abs(local.getUTCHours() - 12);
       if (!grupos.has(dia) || distancia < grupos.get(dia).distancia) grupos.set(dia, { item, distancia });
     }
-    const container = $("#previsao-dias"); container.replaceChildren();
+    const container = document.querySelector("#previsao-dias"); container.replaceChildren();
     for (const [dia, { item }] of [...grupos].slice(0, 3)) {
       const nomeDia = new Date(`${dia}T12:00:00Z`).toLocaleDateString("pt-BR", { timeZone: "UTC", weekday: "long" });
       const linha = criarElemento("div", undefined, "previsao-item");
@@ -110,12 +103,11 @@ async function carregarClima() {
     }
   } catch (erro) {
     console.error("Erro ao obter clima:", erro);
-    $("#temperatura").textContent = "Indisponível";
-    $("#descricao-clima").textContent = "Não foi possível consultar o clima.";
-    $("#previsao-dias").textContent = "Previsão temporariamente indisponível.";
+    document.querySelector("#temperatura").textContent = "Indisponível";
+    document.querySelector("#descricao-clima").textContent = "Não foi possível consultar o clima.";
+    document.querySelector("#previsao-dias").textContent = "Previsão temporariamente indisponível.";
   }
 }
 
-iniciarLayout();
 carregarDestaques();
 carregarClima();

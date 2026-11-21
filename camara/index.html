@@ -9,9 +9,9 @@
     <meta name="author" content="Jainilene Nascimento">
     <meta name="description"
         content="Página inicial do site de câmara de comércio do condominio Space Calhau 1 no bairro Alto do Calhau em São Luis (Maranhão)">
-    <meta property="og:title" content="Página inicial - Câmara Space Calhau 1">
+    <meta property="og:title" content="Página inicial - Câmara de Comércio Space Calhau 1 - São Luis (Maranhão)">
     <meta property="og:description" content="Página inicial da câmara de comércio Space 1 - São Luis(MA) ">
-    <meta property="og:image" content="../favicon.ico">
+    <meta property="og:image" content="https://jainilene.github.io/wdd231/favicon.ico">
     <meta property="og:url" content="https://jainilene.github.io/wdd231/">
     <link rel="icon" href="../favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,25 +28,72 @@
 
 <body>
     <header class="cabecalho">
-        <div class="marca"><img src="../imagens/logo.svg" alt="Logotipo Space 1" width="64" height="64"><div><strong>Space 1</strong><span>Câmara de Comércio</span></div></div>
-        <button id="ham-btn" class="hamburguer" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-bar"></button>
-        <nav id="nav-bar" class="navegacao" aria-label="Navegação principal"><ul>
-            <li class="atual"><a href="index.html" aria-current="page">Página Inicial</a></li>
-            <li><a href="diretorio.html">Diretório</a></li><li><a href="associacao.html">Associe-se</a></li><li><a href="sobre.html">Sobre</a></li>
-        </ul></nav>
+        <div class="marca"><img src="../imagens/logo.svg" alt="Logotipo Space 1" width="64" height="64">
+            <div><strong>Space 1</strong><span>Câmara de Comércio</span></div>
+        </div>
+        <button id="ham-btn" class="hamburguer" type="button" aria-label="Abrir menu" aria-expanded="false"
+            aria-controls="nav-bar"></button>
+        <nav id="nav-bar" class="navegacao" aria-label="Navegação principal">
+            <ul>
+                <li class="atual"><a href="index.html" aria-current="page">Página Inicial</a></li>
+                <li><a href="diretorio.html">Diretório</a></li>
+                <li><a href="associacao.html">Associe-se</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+            </ul>
+        </nav>
     </header>
     <main class="pagina-inicial">
         <section class="hero" aria-label="Bem-vindo à Câmara de Comércio">
-            <img class="img-hero" src="imagens/hero.png" alt="Área comercial com lojas, cafés, árvores e pessoas caminhando" width="1536" height="1024" fetchpriority="high">
-            <div class="hero-conteudo"><p>Conectando negócios e pessoas</p><h1>Bem-vindo à Câmara de Comércio Space 1</h1><a class="botao-cta" href="associacao.html">Associe sua empresa</a></div>
+            <img class="img-hero" src="imagens/hero.webp"
+                alt="Área comercial com lojas, cafés, árvores e pessoas caminhando" width="1536" height="1024"
+                fetchpriority="high">
+            <div class="hero-conteudo">
+                <p>Conectando negócios e pessoas</p>
+                <h1>Bem-vindo à Câmara de Comércio Space 1</h1><a class="botao-cta" href="associacao.html">Associe sua
+                    empresa</a>
+            </div>
         </section>
         <h2 class="titulo-secao">Conheça nossa comunidade comercial</h2>
         <div class="info-basicas">
-            <section class="painel div-eventos"><h2>Eventos</h2><div class="painel-corpo"><h3>Encontro de empreendedores</h3><p>Um espaço para networking, troca de experiências e fortalecimento do comércio local.</p><p>Consulte a Câmara para saber as datas dos próximos encontros.</p></div></section>
-            <section class="painel div-clima"><h2>Clima atual em São Luís</h2><div class="painel-corpo"><div class="clima-resumo"><img id="icone-clima" alt="" width="70" height="70" hidden><p class="temperatura-grande" id="temperatura">Carregando...</p></div><p id="descricao-clima"></p><p>Máxima: <span id="maxima">—</span></p><p>Mínima: <span id="minima">—</span></p><p>Umidade: <span id="umidade">—</span></p><p>Nascer do sol: <span id="hora-nascer-sol">—</span></p><p>Pôr do sol: <span id="hora-por-do-sol">—</span></p></div></section>
-            <section class="painel div-previsao-clima"><h2>Previsão para 3 dias</h2><div id="previsao-dias" class="painel-corpo" aria-live="polite"><p>Carregando previsão...</p></div></section>
+            <section class="painel div-eventos">
+                <h2>Eventos</h2>
+                <div class="painel-corpo">
+                    <h3>Encontro de empreendedores</h3>
+                    <p>Um espaço para networking, troca de experiências e fortalecimento do comércio local.</p>
+                    <p>Consulte a Câmara para saber as datas dos próximos encontros.</p>
+                </div>
+            </section>
+            <section class="painel div-clima">
+                <h2>Clima atual em São Luís</h2>
+                <div class="painel-corpo">
+                    <div class="clima-resumo">
+                        <span id="container-icone-clima"></span>
+                        <p class="temperatura-grande" id="temperatura">
+                            Carregando...
+                        </p>
+                    </div>
+                    <p id="descricao-clima"></p>
+                    <p>Máxima: <span id="maxima">—</span></p>
+                    <p>Mínima: <span id="minima">—</span></p>
+                    <p>Umidade: <span id="umidade">—</span></p>
+                    <p>Nascer do sol: <span id="hora-nascer-sol">—</span></p>
+                    <p>Pôr do sol: <span id="hora-por-do-sol">—</span></p>
+                </div>
+            </section>
+            <section class="painel div-previsao-clima">
+                <h2>Previsão para 3 dias</h2>
+                <div id="previsao-dias" class="painel-corpo" aria-live="polite">
+                    <p>Carregando previsão...</p>
+                </div>
+            </section>
         </div>
-        <section class="secao-destaques" aria-labelledby="titulo-destaques"><h2 id="titulo-destaques" class="titulo-secao">Empresas em destaque</h2><p>Conheça alguns dos nossos associados Ouro e Prata.</p><div class="destaque-empresas" id="destaque-empresas" aria-live="polite"><p>Carregando empresas...</p></div></section>
+        <section class="secao-destaques" aria-labelledby="titulo-destaques">
+            <h2 id="titulo-destaques" class="titulo-secao">Empresas em destaque</h2>
+            <p>Conheça alguns dos nossos associados Ouro e Prata.</p>
+            <div class="destaque-empresas" id="destaque-empresas" aria-live="polite">
+                <p>Carregando empresas...</p>
+            </div>
+        </section>
     </main>
     <footer>
         <div id="dados-camara">
