@@ -1,0 +1,70 @@
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agradecimento | Space 1 Câmara de Comércio</title>
+    <meta name="author" content="Jainilene Nascimento">
+    <meta name="description" content="Agradecimento na Câmara de Comércio Space 1.">
+    <meta property="og:title" content="Agradecimento | Space 1">
+    <meta property="og:description" content="Agradecimento na Câmara de Comércio Space 1.">
+    <meta property="og:image" content="https://jainilene.github.io/wdd231/favicon.ico">
+    <meta property="og:url" content="https://jainilene.github.io/wdd231/camara/agradecimento.html">
+    <link rel="icon" href="../favicon.ico">
+    <link rel="stylesheet" href="estilos/normalize.css">
+    <link rel="stylesheet" href="estilos/telas-pequenas.css">
+    <link rel="stylesheet" href="estilos/telas-grandes.css">
+    <link rel="stylesheet" href="estilos/associacao.css">
+    <script src="scripts/comum.js" defer></script>
+    <script src="scripts/agradecimento.js" defer></script>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <div class="marca"><img src="../imagens/logo.svg" alt="Logotipo Space 1" width="64" height="64">
+            <div><strong>Space 1</strong><span>Câmara de Comércio</span></div>
+        </div><button id="ham-btn" class="hamburguer" type="button" aria-label="Abrir menu" aria-expanded="false"
+            aria-controls="nav-bar"></button>
+        <nav id="nav-bar" class="navegacao" aria-label="Navegação principal">
+            <ul>
+                <li><a href="index.html">Página Inicial</a></li>
+                <li><a href="diretorio.html">Diretório</a></li>
+                <li class="atual"><a href="associacao.html" aria-current="location">Associe-se</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="pagina-associacao">
+        <h1>Obrigado pelo seu interesse!</h1>
+        <section class="resumo-associacao">
+            <h2>Dados informados</h2>
+            <p>Confira abaixo as informações do formulário. Este é um projeto acadêmico; não foi realizado cadastro em
+                servidor.</p>
+            <dl id="resumo"></dl><a class="voltar" href="index.html">Voltar à página inicial</a>
+        </section>
+    </main>
+    <footer>
+        <div id="dados-camara">
+            <p class="titulo-footer">Space 1 Câmara de Comércio</p>
+            <p>Rua 8 Quadra G, Alto do Calhau</p>
+            <p>São Luís (MA)</p>
+            <p>info@space1cc.org</p>
+            <p>(98) 99999-9999</p>
+        </div>
+        <div id="redes-sociais"><a href="https://github.com/jainilene/wdd231" target="_blank" rel="noopener"><img
+                    src="../imagens/github.svg" alt="GitHub" width="16" height="16"></a><a
+                href="https://www.linkedin.com/in/jainilene-nascimento-67155260/" target="_blank" rel="noopener"><img
+                    src="../imagens/linkedin.svg" alt="LinkedIn" width="16" height="16"></a><a
+                href="https://www.facebook.com" target="_blank" rel="noopener"><img src="../imagens/facebook.svg"
+                    alt="Facebook" width="16" height="16"></a><a href="https://x.com" target="_blank"
+                rel="noopener"><img src="../imagens/twitter-x.svg" alt="X" width="16" height="16"></a></div>
+        <div id="dados-projeto">
+            <p class="titulo-footer">Projeto de Aula WDD231</p>
+            <p>Jainilene Nascimento</p>
+            <p>&copy; <span id="ano-atual"></span> Space 1 Câmara de Comércio</p>
+            <p>Última Modificação: <span id="ultima-modificacao"></span></p>
+        </div>
+    </footer>
+</body>
+
+</html>
