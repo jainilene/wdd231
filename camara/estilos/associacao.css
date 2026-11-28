@@ -130,3 +130,6 @@
     overflow-wrap: anywhere;
 }
 
+.body {
+    font-family: 'Roboto', 'sans-serif';
+}
