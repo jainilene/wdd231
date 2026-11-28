@@ -8,3 +8,10 @@ document.querySelectorAll('[data-modal]').forEach(link => {
         modal.addEventListener('close', () => link.focus(), { once: true });
     });
 });
+
+// Fecha os modais sem utilizar formulários auxiliares.
+document.querySelectorAll(".fechar-modal").forEach(botao => {
+    botao.addEventListener("click", () => {
+        botao.closest("dialog").close();
+    });
+});
