@@ -8,7 +8,8 @@
     <meta name="author" content="Jainilene Nascimento">
     <meta name="description" content="Associe-se na Câmara de Comércio Space 1 - São Luis (Maranhão).">
     <meta property="og:title" content="Associe-se | Space 1 - São Luis (MA)">
-    <meta property="og:description" content="Associe-se na Câmara de Comércio Space 1.">
+    <meta property="og:description"
+        content="Página para se associar na Câmara de Comércio Space 1 - São Luis (Maranhão)">
     <meta property="og:image" content="https://jainilene.github.io/wdd231/favicon.ico">
     <meta property="og:url" content="https://jainilene.github.io/wdd231/camara/associacao.html">
     <link rel="icon" href="../favicon.ico">
@@ -48,23 +49,24 @@
                     <label for="sobrenome">Sobrenome *<input id="sobrenome" name="sobrenome" type="text"
                             autocomplete="family-name" title="Sobrenome" required></label>
                     <label for="cargo">Cargo na organização<input id="cargo" name="cargo" type="text"
-                            autocomplete="organization-title"
+                            autocomplete="cargo-na-organizacao"
                             title="Cargo na organização (mínimo de sete letras, espaços ou hífens)"
                             pattern="[\p{L} \-]{7,}"></label>
                     <label for="email">E-mail *<input id="email" name="email" type="email" autocomplete="email"
                             title="E-mail" required placeholder="nome@empresa.com.br"></label>
                     <label for="celular">Celular *<input id="celular" name="celular" type="tel" autocomplete="tel"
                             title="Celular" required></label>
-                    <label for="empresa">Nome da empresa *<input id="empresa" name="empresa" type="text"
+                    <label for="empresa" name="empresa">Nome da empresa *<input id="empresa" name="empresa" type="text"
                             autocomplete="organization" title="Nome da empresa" required></label>
                     <label for="nivel">Nível de associação<select id="nivel" name="nivel" title="Nível de associação">
-                            <option value="np">NP</option>
-                            <option value="bronze">Bronze</option>
-                            <option value="silver">Prata</option>
-                            <option value="gold">Ouro</option>
-                        </select></label><label for="descricao">Descrição da organização<textarea id="descricao"
-                            name="descricao" title="Descrição da atividade" rows="5"></textarea></label><label
-                        hidden><input type="hidden" name="timestamp" id="timestamp"></label><button type="submit">Enviar
+                            <option id="np" value="np">NP</option>
+                            <option id="bronze" value="bronze">Bronze</option>
+                            <option id="silver" value="silver">Prata</option>
+                            <option id="gold" value="gold">Ouro</option>
+                        </select></label>
+                    <label for="descricao">Descrição da organização<textarea id="descricao" name="descricao"
+                            title="Descrição da atividade" rows="5"></textarea></label><label hidden><input
+                            type="hidden" name="timestamp" id="timestamp"></label><button type="submit">Enviar
                         pedido de associação</button>
                 </form>
             </section>
